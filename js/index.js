@@ -61,13 +61,28 @@ services.forEach(function(service){
 
 })
 const faciDOM = document.querySelector(".facilities")
-const faciHeader = document.createElement("h3")
+const faciHeader = document.createElement("h2")
 faciHeader.textContent = facilities.headline
 faciHeader.classList.add("faci__header")
 faciDOM.append(faciHeader)
 
+console.log(facilities.options[1].icon);
+
 
 facilities.options.forEach(function(option){
+    
+    const faciImg = document.createElement("img")
+    faciImg.setAttribute("src",option.icon)
+    faciImg.classList.add("faci__img")
 
+    const faciChildHeader = document.createElement("h3")
+    faciChildHeader.classList.add("faci__child_header")
+    faciChildHeader.textContent = option.headline
+
+    const faciText = document.createElement("p")
+    faciText.classList.add("faci__text")
+    faciText.textContent = option.text
+
+    faciDOM.append(faciImg,faciChildHeader,faciText)
 })
 
