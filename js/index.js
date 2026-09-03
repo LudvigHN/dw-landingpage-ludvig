@@ -10,26 +10,27 @@
 const heroDOM = document.querySelector(".hero")
 
 const heroImg = document.createElement("img")
-const heroHeadline = document.createElement("h1")
-const heroP = document.createElement("p")
-const heroBtn = document.createElement("button")
-const heroBtnImg = document.createElement("img")
 heroImg.setAttribute("src", hero.image)
-heroHeadline.textContent = hero.headline
-heroP.textContent = hero.copy
-
-heroBtnImg.setAttribute("src", hero.icon)
-
-heroBtn.textContent = `Explore`
-heroBtn.prepend(heroBtnImg)
-const heroDiv = document.createElement("div")
-
 heroImg.classList.add("hero__img")
-heroDiv.classList.add("hero_wrapper")
-heroBtn.classList.add("hero__btn")
+
+const heroHeadline = document.createElement("h1")
+heroHeadline.textContent = hero.headline
 heroHeadline.classList.add("hero__header")
+
+const heroP = document.createElement("p")
+heroP.textContent = hero.copy
 heroP.classList.add("hero__text")
+
+const heroBtn = document.createElement("button")
+heroBtn.classList.add("hero__btn")
+const heroBtnImg = document.createElement("img")
+heroBtnImg.setAttribute("src", hero.icon)
 heroBtnImg.classList.add("hero__btn_img")
+heroBtn.textContent += `Explore`
+heroBtn.prepend(heroBtnImg)
+
+const heroDiv = document.createElement("div")
+heroDiv.classList.add("hero_wrapper")
 
 heroDiv.append(heroHeadline, heroP, heroBtn)
 heroDOM.append(heroImg, heroDiv)
@@ -60,14 +61,16 @@ services.forEach(function(service){
     serviceDOM.append(serviceWrapper)
 
 })
+
+
+// facilities
+
 const faciDOM = document.querySelector(".facilities")
 const faciHeader = document.createElement("h2")
+
 faciHeader.textContent = facilities.headline
 faciHeader.classList.add("faci__header")
 faciDOM.append(faciHeader)
-
-console.log(facilities.options[1].icon);
-
 
 facilities.options.forEach(function(option){
     
@@ -85,4 +88,5 @@ facilities.options.forEach(function(option){
 
     faciDOM.append(faciImg,faciChildHeader,faciText)
 })
+
 
