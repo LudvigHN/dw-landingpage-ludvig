@@ -23,6 +23,12 @@ heroBtnImg.setAttribute("src", hero.icon)
 heroBtn.textContent = `Explore`
 heroBtn.prepend(heroBtnImg)
 const heroDiv = document.createElement("div")
+heroImg.classList.add("hero__img")
+heroDiv.classList.add("hero_wrapper")
+heroBtn.classList.add("hero__btn")
+heroHeadline.classList.add("hero__header")
+heroP.classList.add("hero__text")
+heroBtnImg.classList.add("hero__btn_img")
 heroDiv.append(heroHeadline, heroP, heroBtn)
 heroDOM.append(heroImg, heroDiv)
 
