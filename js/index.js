@@ -38,9 +38,9 @@ heroDOM.append(heroImg, heroDiv)
 // services
 const serviceDOM = document.querySelector(".services")
 
-services.forEach(function(service){
+services.forEach(function (service) {
     const serviceImg = document.createElement("img")
-    serviceImg.setAttribute("src",service.illustration)
+    serviceImg.setAttribute("src", service.illustration)
 
     const serviceHeader = document.createElement("h2")
     serviceHeader.classList.add("service__header")
@@ -57,7 +57,7 @@ services.forEach(function(service){
     const serviceWrapper = document.createElement("div")
     serviceWrapper.classList.add("service_wrapper")
 
-    serviceWrapper.append(serviceImg,serviceHeader,serviceText,serviceLink)
+    serviceWrapper.append(serviceImg, serviceHeader, serviceText, serviceLink)
     serviceDOM.append(serviceWrapper)
 
 })
@@ -72,10 +72,11 @@ faciHeader.textContent = facilities.headline
 faciHeader.classList.add("faci__header")
 faciDOM.append(faciHeader)
 
-facilities.options.forEach(function(option){
-    
+facilities.options.forEach(function (option) {
+    const faciItemWrapper = document.createElement("div")
+
     const faciImg = document.createElement("img")
-    faciImg.setAttribute("src",option.icon)
+    faciImg.setAttribute("src", option.icon)
     faciImg.classList.add("faci__img")
 
     const faciChildHeader = document.createElement("h3")
@@ -86,7 +87,60 @@ facilities.options.forEach(function(option){
     faciText.classList.add("faci__text")
     faciText.textContent = option.text
 
-    faciDOM.append(faciImg,faciChildHeader,faciText)
+    faciItemWrapper.append(faciImg, faciChildHeader, faciText)
+    faciDOM.append(faciItemWrapper)
+})
+
+// sites
+
+const sitesDOM = document.querySelector(".sites")
+
+const sitesDivText = document.createElement("div")
+sitesDivText.classList.add("sites__text_wrapper")
+
+const sitesHeader = document.createElement("h2")
+sitesHeader.classList.add("sites__header")
+sitesHeader.textContent = sites.headline
+
+const sitesText = document.createElement("p")
+sitesText.classList.add("sites__text")
+sitesText.textContent = sites.text
+
+const sitesBtn = document.createElement("button")
+sitesBtn.classList.add("sites__btn")
+const sitesBtnImg = document.createElement("img")
+sitesBtnImg.setAttribute("src", sites.btnicon)
+sitesBtnImg.classList.add("sites__btn_img")
+sitesBtn.textContent += "Start"
+sitesBtn.prepend(sitesBtnImg)
+
+sitesDivText.append(sitesHeader,sitesText,sitesBtn)
+
+const PlacesDiv = document.createElement("div")
+PlacesDiv.classList.add("sites__places_wrapper")
+
+sites.places.forEach(function(place){
+    const placesItemDiv = document.createElement("div")
+    const placeImg = document.createElement("img")
+    placeImg.setAttribute("src", place.img)
+    placeImg.classList.add("place__img")
+
+    const placeHeader = document.createElement("h3")
+    placeHeader.classList.add("place_header")
+    placeHeader.textContent = place.name
+
+    const placeCity = document.createElement("p")
+    placeCity.classList.add("place__text")
+    placeCity.textContent = place.city
+
+    const placeLink = document.createElement("a")
+    placeLink.classList.add("place__link")
+    place.textContent = "View the Site"
+
+    placesItemDiv.append(placeImg,placeHeader,placeCity,placeLink)
+    PlacesDiv.append(placesItemDiv)
 })
 
 
+
+sitesDOM.append(sitesDivText, PlacesDiv)
