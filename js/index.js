@@ -60,3 +60,14 @@ services.forEach(function(service){
     serviceDOM.append(serviceWrapper)
 
 })
+const faciDOM = document.querySelector(".facilities")
+const faciHeader = document.createElement("h3")
+faciHeader.textContent = facilities.headline
+faciHeader.classList.add("faci__header")
+faciDOM.append(faciHeader)
+
+
+facilities.options.forEach(function(option){
+
+})
+
