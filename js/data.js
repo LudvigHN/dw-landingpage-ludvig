@@ -106,15 +106,19 @@ let footer = {
             links: [
                 {
                     text: "Where to Shop",
+                    link:"#"
                 },
                 {
                     text: "Tour Guided",
+                    link:"#"
                 },
                 {
                     text: "Our Tours",
+                    link:"#"
                 },
                 {
                     text: "About Us",
+                    link:"#"
                 }
             ]
         },
@@ -123,12 +127,15 @@ let footer = {
             links: [
                 {
                     text: "Jour your Pairing",
+                    link:"#"
                 },
                 {
                     text: "Offer your Service",
+                    link:"#"
                 },
                 {
                     text: "Are you a guide?",
+                    link:"#"
                 },
                 
             ]
@@ -138,15 +145,19 @@ let footer = {
             links: [
                 {
                     text: "Support Center",
+                    link:"#"
                 },
                 {
                     text: "FAQs",
+                    link:"#"
                 },
                 {
                     text: "Cancallation Options",
+                    link:"#"
                 },
                 {
                     text: "Reliability and Sequrity",
+                    link:"#"
                 }
             ]
         },
