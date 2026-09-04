@@ -179,6 +179,20 @@ advantagesDOM.append(advantagesHeader,advantagesItemsDiv)
 // footer
 
 const footerDOM = document.querySelector(".footer")
+
+const footerHero = document.createElement("div")
+footerHero.classList.add("footer__hero")
+
+const footerHeroHeader = document.createElement("h2")
+footerHeroHeader.classList.add("footer__hero_header")
+footerHeroHeader.textContent = footer.title
+
+const footerHeroText = document.createElement("p")
+footerHeroText.classList.add("footer__hero_text")
+footerHeroText.textContent = footer.headline
+
+footerHero.append(footerHeroHeader,footerHeroText)
+// footer info section
 const footerInfoSection = document.createElement("div")
 footer.info.forEach(function(info){
     const footerItemHeader = document.createElement("h3")
@@ -208,5 +222,5 @@ footer.info.forEach(function(info){
     footerInfoSection.append(footerItemWrapper)
 })
 
-footerDOM.append(footerInfoSection)
+footerDOM.append(footerHero,footerInfoSection)
 
