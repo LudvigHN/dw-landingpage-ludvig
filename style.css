@@ -6,14 +6,17 @@
 h1,h2,h3,h4,h5,h6{
     font-family: 'Merriweather', sans-serif ;
 }
-
+:root{
+    --link-color:#f78065;
+    --text-color:#0000007e;
+}
 body {
     margin: 0;
     max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
 }
-
+/* hero */
 .hero__img {
     max-width: 100%;
 }
@@ -32,7 +35,7 @@ body {
 }
 
 .hero__btn {
-    background-color: #f78065;
+    background-color: var(--link-color);
     text-align: center;
     border: none;
     width: 150px;
@@ -47,3 +50,23 @@ body {
 .hero__btn:active {
     border:inset 2px ;
 }
+/* service */
+.services{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.service_wrapper{
+    margin: 1rem;
+}
+.service__p{
+    color: var(--text-color);
+}
+.service__link{
+    color: var(--link-color);
+    max-width: 100%;
+}
+.service__link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
