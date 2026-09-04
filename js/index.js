@@ -138,7 +138,8 @@ sites.places.forEach(function(place){
 
     const placeLink = document.createElement("a")
     placeLink.classList.add("place__link")
-    place.textContent = "View the Site"
+    placeLink.textContent = "View the Site"
+    
 
     placesItemDiv.append(placeImg,placeHeader,placeCity,placeLink)
     PlacesDiv.append(placesItemDiv)
