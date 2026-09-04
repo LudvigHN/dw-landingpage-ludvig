@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    text-wrap: balance;
 }
 
 h1,
@@ -177,4 +178,32 @@ section{
 .place__link:hover{
     text-decoration: underline;
     cursor: pointer;
+}
+
+/* advantages */
+.advantages{
+    margin-top: 100px;
+}
+.advantages__header{
+    margin: 5rem 0;
+    font-size: 2rem;
+}
+.advantages__items_wrapper{
+    display: flex;
+}
+.advantages__item_div{
+    margin: 0 3rem 0 0;
+    text-wrap: balance;
+}
+.advantages__item_div:last-of-type{
+    margin: 0;
+}
+.advantage__item_text{
+    color: var(--text-color);
+}
+.advantage__item_header{
+    
+    font-size: 1.5rem;
+    margin: 4rem 0;
+    height: 28px;
 }
