@@ -129,7 +129,7 @@ sites.places.forEach(function(place){
     placeImg.classList.add("place__img")
 
     const placeHeader = document.createElement("h3")
-    placeHeader.classList.add("place_header")
+    placeHeader.classList.add("place__header")
     placeHeader.textContent = place.name
 
     const placeCity = document.createElement("p")
@@ -139,7 +139,9 @@ sites.places.forEach(function(place){
     const placeLink = document.createElement("a")
     placeLink.classList.add("place__link")
     placeLink.textContent = "View the Site"
-    
+
+    // if there was given a link
+    // placeLink.setAttribute("src",place.link)
 
     placesItemDiv.append(placeImg,placeHeader,placeCity,placeLink)
     PlacesDiv.append(placesItemDiv)
