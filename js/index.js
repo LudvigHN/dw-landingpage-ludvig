@@ -141,6 +141,37 @@ sites.places.forEach(function(place){
     PlacesDiv.append(placesItemDiv)
 })
 
-
-
 sitesDOM.append(sitesDivText, PlacesDiv)
+
+// advantages
+const advantagesDOM = document.querySelector(".advantages")
+
+const advantagesHeader = document.createElement("h2")
+advantagesHeader.classList.add("advantages__header")
+advantagesHeader.textContent = "Our Advantages"
+
+
+const advantagesItemsDiv = document.createElement("div")
+advantagesItemsDiv.classList.add("advantages__items_wrapper")
+
+advantages.forEach(function(advantage){
+    const advantageDiv = document.createElement("div")
+    advantageDiv.classList.add("advantages__item_div")
+
+    const advantageImg = document.createElement("img")
+    advantageImg.classList.add("advantage__img")
+    advantageImg.setAttribute("src",advantage.icon)
+
+    const advantageTitle = document.createElement("h3")
+    advantageTitle.classList.add("advantage__item_header")
+    advantageTitle.textContent = advantage.headline
+
+    const advantageText = document.createElement("p")
+    advantageText.classList.add("advantage__item_text")
+    advantageText.textContent = advantage.text
+    advantageDiv.append(advantageImg,advantageTitle,advantageText)
+    advantagesItemsDiv.append(advantageDiv)
+})
+
+
+advantagesDOM.append(advantagesHeader,advantagesItemsDiv)
