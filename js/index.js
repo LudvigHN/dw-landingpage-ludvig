@@ -201,6 +201,7 @@ footerHero.append(footerHeroHeader,footerHeroText)
 //#endregion
 // footer info section
 const footerInfoSection = document.createElement("div")
+footerInfoSection.classList.add("footer__info_section")
 footer.info.forEach(function(info){
     const footerItemHeader = document.createElement("h3")
     footerItemHeader.textContent = info.headline
