@@ -70,11 +70,13 @@ const faciHeader = document.createElement("h2")
 
 faciHeader.textContent = facilities.headline
 faciHeader.classList.add("faci__header")
-faciDOM.append(faciHeader)
 
+
+const faciItems = document.createElement("div")
+faciItems.classList.add("faci__items")
 facilities.options.forEach(function (option) {
     const faciItemWrapper = document.createElement("div")
-
+    faciItemWrapper.classList.add("faci__items_wrapper")
     const faciImg = document.createElement("img")
     faciImg.setAttribute("src", option.icon)
     faciImg.classList.add("faci__img")
@@ -88,8 +90,9 @@ facilities.options.forEach(function (option) {
     faciText.textContent = option.text
 
     faciItemWrapper.append(faciImg, faciChildHeader, faciText)
-    faciDOM.append(faciItemWrapper)
+    faciItems.append(faciItemWrapper)
 })
+faciDOM.append(faciHeader,faciItems)
 
 // sites
 
