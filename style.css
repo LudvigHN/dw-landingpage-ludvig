@@ -110,3 +110,66 @@ main{
 .faci__text{
     color: var(--text-color);
 }
+
+/* sites */
+.sites {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.sites__text_wrapper{
+    max-width: 25%;
+    padding-right: 2rem;
+}
+.sites__places_wrapper{
+    display: flex;
+    gap: 3rem;
+    max-width: 75%;
+    justify-content: center;
+}
+.sites__header{
+    font-size: 2rem;
+}
+.sites__text{
+    color: var(--text-color);
+    margin: 2rem 0;
+    font-size: 1.3rem;
+}
+.sites__btn{
+    background-color: var(--link-color);
+    text-align: center;
+    border: none;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+
+}
+
+
+
+.place__img{
+    max-width: 230px;
+    height: 420px;
+    object-fit: cover;
+}
+.sites__places_wrapper div{
+    max-width: 100%;
+}
+.place__header{
+    margin: 0.8rem 0 0.6rem;
+}
+.place__text{
+    color: var(--text-color);
+    margin: 0.5rem 0;
+}
+.place__link{
+    color: var(--link-color);
+}
+.place__link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
