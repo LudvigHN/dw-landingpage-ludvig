@@ -6,7 +6,7 @@
 
 
 // hero
-
+//#region hero
 const heroDOM = document.querySelector(".hero")
 
 const heroImg = document.createElement("img")
@@ -34,7 +34,7 @@ heroDiv.classList.add("hero_wrapper")
 
 heroDiv.append(heroHeadline, heroP, heroBtn)
 heroDOM.append(heroImg, heroDiv)
-
+//#endregion
 // services
 const serviceDOM = document.querySelector(".services")
 
@@ -95,7 +95,7 @@ facilities.options.forEach(function (option) {
 faciDOM.append(faciHeader,faciItems)
 
 // sites
-
+//#region sites
 const sitesDOM = document.querySelector(".sites")
 
 const sitesDivText = document.createElement("div")
@@ -121,7 +121,7 @@ sitesDivText.append(sitesHeader,sitesText,sitesBtn)
 
 const PlacesDiv = document.createElement("div")
 PlacesDiv.classList.add("sites__places_wrapper")
-
+//#endregion
 sites.places.forEach(function(place){
     const placesItemDiv = document.createElement("div")
     const placeImg = document.createElement("img")
@@ -180,7 +180,7 @@ advantages.forEach(function(advantage){
 advantagesDOM.append(advantagesHeader,advantagesItemsDiv)
 
 // footer
-
+//#region footer
 const footerDOM = document.querySelector(".footer")
 
 const footerHero = document.createElement("div")
@@ -195,6 +195,7 @@ footerHeroText.classList.add("footer__hero_text")
 footerHeroText.textContent = footer.headline
 
 footerHero.append(footerHeroHeader,footerHeroText)
+//#endregion
 // footer info section
 const footerInfoSection = document.createElement("div")
 footer.info.forEach(function(info){
