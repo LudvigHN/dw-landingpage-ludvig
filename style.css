@@ -207,3 +207,37 @@ section{
     margin: 4rem 0;
     height: 28px;
 }
+
+/* footer */
+.footer{
+    background-color:#f7f7f7 ;
+    padding: 5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.footer__hero_text{
+    font-size: 3rem;
+    font-weight: bold;
+    max-width: 100px;
+    margin: 1rem 0;
+}
+.footer__info_section{
+    display: flex;
+    gap: 6rem;
+}
+.footer__links{
+    list-style: none;
+    padding: 0;
+}
+.footer__links_link{
+    margin: 1.5rem 0;
+}
+.footer__links_link a{
+    color: black;
+    text-decoration: none;
+    
+}
+.footer__links_link a:hover{
+    text-decoration: underline;
+}
