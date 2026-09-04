@@ -126,7 +126,7 @@ let footer = {
             headline: "Become Manager",
             links: [
                 {
-                    text: "Jour your Pairing",
+                    text: "Join your Pairing",
                     link:"#"
                 },
                 {
