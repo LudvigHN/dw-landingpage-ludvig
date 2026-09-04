@@ -175,3 +175,38 @@ advantages.forEach(function(advantage){
 
 
 advantagesDOM.append(advantagesHeader,advantagesItemsDiv)
+
+// footer
+
+const footerDOM = document.querySelector(".footer")
+const footerInfoSection = document.createElement("div")
+footer.info.forEach(function(info){
+    const footerItemHeader = document.createElement("h3")
+    footerItemHeader.textContent = info.headline
+
+    const footerList = document.createElement("ul")
+    footerList.classList.add("footer__links")
+    
+    const footerItemWrapper = document.createElement("div")
+    footerItemWrapper.classList.add("footer__item_wrapper")
+
+    info.links.forEach(function(link){
+        const footerListItem = document.createElement("li")
+        footerListItem.classList.add("footer__links_link")
+
+        const footerListlink = document.createElement("a")
+        footerListlink.setAttribute("href",link.link)
+
+
+        footerListlink.textContent = link.text
+
+        footerListItem.append(footerListlink)
+        footerList.append(footerListItem)
+    })
+
+    footerItemWrapper.append(footerItemHeader,footerList)
+    footerInfoSection.append(footerItemWrapper)
+})
+
+footerDOM.append(footerInfoSection)
+
