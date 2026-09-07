@@ -14,7 +14,7 @@ heroImg.setAttribute("src", hero.image)
 heroImg.classList.add("hero__img")
 
 const heroHeadline = document.createElement("h1")
-heroHeadline.textContent = hero.headline
+heroHeadline.innerHTML = `Find out how we can <span class="hero__header_span">save your time</span> in Backpacking in Europe`
 heroHeadline.classList.add("hero__header")
 
 const heroP = document.createElement("p")
